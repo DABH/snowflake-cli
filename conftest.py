@@ -1,3 +1,4 @@
+import os
 import sys
 from unittest import mock
 
@@ -46,3 +47,8 @@ def make_win32_dummy_console():
                 yield
     else:
         yield
+
+
+def pytest_configure(config):
+    """Snapshot tests compare English output; a contributor's locale must not change it."""
+    os.environ.setdefault("LOCALIZER_LANG", "en")

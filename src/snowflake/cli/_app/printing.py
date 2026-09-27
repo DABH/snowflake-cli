@@ -24,6 +24,7 @@ from pathlib import Path
 from textwrap import indent
 from typing import Any, Dict, TextIO
 
+import localizer
 from rich import box, get_console
 from rich import print as rich_print
 from rich.console import Console
@@ -228,7 +229,7 @@ def _print_multiple_table_results(obj: CollectionResult):
     try:
         first_item = next(items)
     except StopIteration:
-        rich_print(NO_ITEMS_FOUND, end="\n\n")
+        rich_print(localizer.t(NO_ITEMS_FOUND), end="\n\n")
         return
     table = _get_table()
     for column in first_item.keys():
@@ -356,13 +357,16 @@ def _stream_json(result):
 
 
 def print_unstructured(obj: CommandResult | None):
-    """Handles outputs like table, plain text and other unstructured types."""
+    """Handles outputs like table, plain text and other unstructured types.
+
+    Human-readable output only: messages are shown in the user's language here, while the structured
+    formats (JSON, CSV) always carry the original text."""
     if not obj:
-        rich_print("Done", flush=True)
+        rich_print(localizer.t("Done"), flush=True)
     elif not obj.result:
-        rich_print("No data", flush=True)
+        rich_print(localizer.t("No data"), flush=True)
     elif isinstance(obj, MessageResult):
-        rich_print(sanitize_for_terminal(obj.message), flush=True)
+        rich_print(sanitize_for_terminal(localizer.t(obj.message)), flush=True)
     else:
         if isinstance(obj, ObjectResult):
             _print_single_table(obj)

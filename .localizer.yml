@@ -1,0 +1,38 @@
+# Localizer configuration (https://locale.dev/reference/configuration/).
+language: python
+languages: [ja, de]
+locales_dir: src/snowflake/cli/locales
+
+glossary:
+  # Product names and terms that must never be translated.
+  keep:
+    - Snowflake
+    - Snowflake CLI
+    - Snowpark
+    - Snowpark Container Services
+    - Snowflake Native App
+    - Streamlit
+    - Snowsight
+    - Cortex
+    - DCM
+    - dbt
+    - SQL
+    - snow
+
+extract:
+  exclude:
+    - "tests*/**"
+    - "test_external_plugins/**"
+    - "plugin-template/**"
+    - "scripts/**"
+    - "performance_history_analysis/**"
+  # The console's message methods and command results carry user-facing text.
+  funcs:
+    "*.step": [0]
+    "*.message": [0]
+    "*.plain_message": [0]
+    "*.warning": [0]
+    "*.stderr_warning": [0]
+    "*.panel": [0]
+    "*.phase": [0, 1]
+    snowflake.cli.api.output.types.MessageResult: [0]

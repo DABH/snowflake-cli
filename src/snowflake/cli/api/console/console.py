@@ -17,6 +17,7 @@ from __future__ import annotations
 from contextlib import contextmanager
 from typing import Optional
 
+import localizer
 from rich import get_console
 from rich.console import Console
 from rich.panel import Panel
@@ -69,6 +70,8 @@ class CliConsole(AbstractConsole):
 
     def _format_message(self, message: str, output: Output) -> Text:
         """Wraps message in rich Text object and applies formatting."""
+        if output is not Output.PLAIN:  # plain_message carries untrusted text, which is never translated
+            message = localizer.t(message)
         style = self._styles.get(output, "default")
         if style is not None:
             text = Text(message, style=style)
@@ -176,7 +179,7 @@ class CliConsole(AbstractConsole):
     def panel(self, message: str):
         """Displays a message in a panel."""
         style = self._styles.get(Output.PANEL, Style())
-        panel = Panel(message, style=style)
+        panel = Panel(localizer.t(message), style=style)
         self._print(panel)
 
     def styled_message(self, message: str, style: Style | str = ""):

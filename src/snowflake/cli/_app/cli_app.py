@@ -23,6 +23,7 @@ from pathlib import Path
 from typing import Optional
 
 import click
+import localizer
 import typer
 from click import Context as ClickContext
 from snowflake.cli import __about__
@@ -311,6 +312,9 @@ class CliAppFactory:
 
         self._validate_internal_flags_excluded_from_telemetry(default)
 
+        # Renders help, errors and prompts in the user's language (SNOWFLAKE_CLI_LANG, LANG or the OS
+        # setting) from the catalogs in snowflake.cli.locales; plugin commands registered later are covered.
+        localizer.localize(app, "snowflake.cli.locales", env_var="SNOWFLAKE_CLI_LANG")
         self._app = app
         return app
 
