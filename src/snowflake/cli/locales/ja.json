@@ -1229,7 +1229,7 @@
     "Show what would change without downloading or retargeting the shim.": "ダウンロードや shim の再ターゲットを行わずに、変更される内容を表示します。",
     "Show where configuration values come from.\n\nThis command displays the configuration resolution process, showing which\nsource (CLI arguments, environment variables, or config files) provided\neach configuration value. Useful for debugging configuration issues.\n\nNote: This command requires the enhanced configuration system to be enabled.\nSet SNOWFLAKE_CLI_CONFIG_V2_ENABLED=true to enable it.": "コンフィギュレーション値の取得元を表示します。\n\nこのコマンドはコンフィギュレーションの解決プロセスを表示し、各コンフィギュレーション値がどのソース (CLI 引数、環境変数、コンフィギュレーションファイル) から提供されたかを示します。コンフィギュレーションの問題をデバッグする際に便利です。\n\n注意: このコマンドには拡張コンフィギュレーションシステムを有効にする必要があります。有効にするには SNOWFLAKE_CLI_CONFIG_V2_ENABLED=true を設定してください。",
     "Shows information about the Snowflake CLI": "Snowflake CLI に関する情報を表示します",
-    "Shows version of the Snowflake CLI": "Snowflake CLI のバージョンを表示します",
+    "Shows the version of the Snowflake CLI": "Snowflake CLI のバージョンを表示します",
     "Shows what objects would be created, altered, or dropped by the `deploy` command, without applying any changes.": "変更を適用せずに、`deploy` コマンドによって作成、変更、または削除されるオブジェクトを表示します。",
     "Skip comparing versions of dependencies between requirements and Anaconda.": "requirements と Anaconda 間で依存関係のバージョン比較をスキップします。",
     "Skip creation if the code bundle already exists (CREATE ... IF NOT EXISTS).": "コードバンドルがすでに存在する場合は作成をスキップします (CREATE ... IF NOT EXISTS)。",
