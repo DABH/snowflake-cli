@@ -221,7 +221,7 @@ class CliAppFactory:
             version: bool = typer.Option(
                 None,
                 "--version",
-                help="Shows version of the Snowflake CLI",
+                help="Shows the version of the Snowflake CLI",
                 callback=self._version_callback(),
                 is_eager=True,
             ),
