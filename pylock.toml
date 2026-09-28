@@ -335,10 +335,10 @@ sdist = { url = "https://files.pythonhosted.org/packages/70/09/d904a6e96f76ff214
 wheels = [{ url = "https://files.pythonhosted.org/packages/d3/32/da7f44bcb1105d3e88a0b74ebdca50c59121d2ddf71c9e34ba47df7f3a56/keyring-25.6.0-py3-none-any.whl", upload-time = 2024-12-25T15:26:44Z, size = 39085, hashes = { sha256 = "552a3f7af126ece7ed5c89753650eec89c7eaae8617d0aa4d9ad2b75111266bd" } }]
 
 [[packages]]
-name = "localizer-py"
-version = "0.5.0"
-sdist = { url = "https://files.pythonhosted.org/packages/92/8e/74b09817dc4c7e81372f3b05797cfc97ffda42f1774b588b68fa4372feb8/localizer_py-0.5.0.tar.gz", upload-time = 2026-09-28T00:17:20Z, size = 50170, hashes = { sha256 = "6ae6a11ad65e91d3269ee6e5458eeb1d13f15423f46c82062e2e0404f9818616" } }
-wheels = [{ url = "https://files.pythonhosted.org/packages/24/9c/1d1fcdf9bd4232b24015d03f60ef946729026bbff24e64cd12024f78afbc/localizer_py-0.5.0-py3-none-any.whl", upload-time = 2026-09-28T00:17:18Z, size = 57848, hashes = { sha256 = "47a013d3bf45c61daeccbb18140b7f7993e097a15bad36e9e22cb5693c6b892a" } }]
+name = "localizer"
+version = "0.5.1"
+sdist = { url = "https://files.pythonhosted.org/packages/06/03/7548c056be1ba2aa09437832e9b4daea7e5a9f53e04be430ce71f0f5aaf1/localizer-0.5.1.tar.gz", upload-time = 2026-09-28T00:55:28Z, size = 50163, hashes = { sha256 = "91d03338ba126c69f1bf8d24794f1a37b9466164ed0289549a8cfaf33275458e" } }
+wheels = [{ url = "https://files.pythonhosted.org/packages/44/ff/3bf560aff1ecaa8210b5a67f5c5488e24f6b61278173e3c55088045ac076/localizer-0.5.1-py3-none-any.whl", upload-time = 2026-09-28T00:55:26Z, size = 57827, hashes = { sha256 = "8e2ae3bd5cd8d5aca6330509620dc88e38fd1944bf248b751a3dcc944611aa54" } }]
 
 [[packages]]
 name = "markdown-it-py"
